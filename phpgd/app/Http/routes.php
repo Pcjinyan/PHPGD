@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    return Response::view('home')->header('Content-Type', 'image/gif');
+});
+
+Route::get('/captcha', 'CaptchaController@index');
+
+//Route::get('/home', 'HomeController@index');
